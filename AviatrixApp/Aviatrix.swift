@@ -22,11 +22,11 @@ class Aviatrix {
         
     }
     
-    func distanceTo() {
+    func distanceTo(target : String) {
     
     }
     
-    func knownDestinations() {
-        
+    func knownDestinations() -> [String] {
+       return ["St. Louis"]
     }
 }
