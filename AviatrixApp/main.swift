@@ -30,27 +30,32 @@ func fly(plane : Aviatrix) {
     }
     
     let response = Int(readLine()!)
-//    let desiredDestination = plane.knownDestinations()[response!]
+    var desiredLocation = ""
     
-    //if (raw_input == number.to_s) && (0...destinations.count).include?(number)
-    // insert logic to make sure the number was valid
-    print("🛫 Preparing for takeoff...")
-    print("Flying...")
+    if response! >= 0 && response! < 4 {
+        desiredLocation = plane.knownDestinations()[response!]
+        
+        print("🛫 Preparing for takeoff...")
+        print("🛫 Flying...")
+        
+        if fuelCheck(plane: plane, destination : desiredLocation) {
+            plane.flyTo(destination: desiredLocation)
+            print("🛬 You've arrived in _________!")
+            gauges(plane: plane)
+        }
+    }
+    else {
+        print("⚠️Please enter a valid command⚠️")
+    }
     
-//    if fuelCheck(plane: plane, destination : desiredDestination) == true {
-//        plane.flyTo(destination: desiredDestination)
-//        // call fuel check function, in this file.
-//        print("🛬 You've arrived in ______!")
-//        gauges(plane: plane)
-//    }
 }
 
 func refuel(plane : Aviatrix) {
     let refuelData = plane.refuel()
     
     print("Refueling...")
-    print("⛽ Here in ___, jet fuel costs _____")
-    print("⛽ You refueled ____ gallons totaling $_____")
+    print("⛽ Here in _________, jet fuel costs _________")
+    print("⛽ You refueled _________ gallons totaling _________")
 }
 
 func fuelCheck(plane : Aviatrix, destination : String) -> Bool {
@@ -58,7 +63,7 @@ func fuelCheck(plane : Aviatrix, destination : String) -> Bool {
 //    if plane.fuelLevel < distanceToTravel {
 //        print(" ")
 //        print("🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥")
-//        print("Oh no! You've run out of fuel and crashed on the way to ___!")
+//        print("Oh no! You've run out of fuel and crashed on the way to \(plane.location)!")
 //        print("🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥")
 //
 //        return false
@@ -70,10 +75,10 @@ func fuelCheck(plane : Aviatrix, destination : String) -> Bool {
 
 var av = Aviatrix()
 
-print("Welcome to the Aviatrix Flight System by ______")
+print("Welcome to the Aviatrix Flight System by _________")
 av.start()
 
-print("You're currently in ______")
+print("You're currently in _________")
 
 var command = ""
 
@@ -98,10 +103,9 @@ while command != "q" {
         refuel(plane: av)
     }
     else if command != "q" {
-        print("Please enter a valid command!")
+        print("⚠️Please enter a valid command⚠️")
     }
 }
 
 print(" ")
-print("Thanks for flying with ________ airline!")
-
+print("Thanks for flying with _________ airline!")

@@ -18,7 +18,7 @@ class Aviatrix {
         
     }
     
-    func flyTo() {
+    func flyTo(destination : String) {
         
     }
     
