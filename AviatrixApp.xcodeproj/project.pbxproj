@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		502D974D20CDF4C10059F502 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502D974C20CDF4C10059F502 /* main.swift */; };
+		502D975420CDF54F0059F502 /* Aviatrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502D975320CDF54F0059F502 /* Aviatrix.swift */; };
+		502D975620CDF55D0059F502 /* AviatrixData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502D975520CDF55D0059F502 /* AviatrixData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		502D974920CDF4C10059F502 /* AviatrixApp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AviatrixApp; sourceTree = BUILT_PRODUCTS_DIR; };
 		502D974C20CDF4C10059F502 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		502D975320CDF54F0059F502 /* Aviatrix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aviatrix.swift; sourceTree = "<group>"; };
+		502D975520CDF55D0059F502 /* AviatrixData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AviatrixData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 			isa = PBXGroup;
 			children = (
 				502D974C20CDF4C10059F502 /* main.swift */,
+				502D975320CDF54F0059F502 /* Aviatrix.swift */,
+				502D975520CDF55D0059F502 /* AviatrixData.swift */,
 			);
 			path = AviatrixApp;
 			sourceTree = "<group>";
@@ -119,7 +125,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				502D975620CDF55D0059F502 /* AviatrixData.swift in Sources */,
 				502D974D20CDF4C10059F502 /* main.swift in Sources */,
+				502D975420CDF54F0059F502 /* Aviatrix.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
