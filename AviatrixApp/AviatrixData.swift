@@ -8,8 +8,6 @@
 
 import Foundation
 
-import Foundation
-
 class AviatrixData {
     
     var fuelPrices = [

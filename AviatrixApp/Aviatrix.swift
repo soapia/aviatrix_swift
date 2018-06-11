@@ -7,3 +7,26 @@
 //
 
 import Foundation
+
+class Aviatrix {
+    
+    func start() {
+    
+    }
+    
+    func refuel() {
+        
+    }
+    
+    func flyTo() {
+        
+    }
+    
+    func distanceTo() {
+    
+    }
+    
+    func knownDestinations() {
+        
+    }
+}
