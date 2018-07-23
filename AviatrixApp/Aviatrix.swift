@@ -10,7 +10,7 @@ import Foundation
 
 class Aviatrix {
     
-    func start() {
+    func start() -> Bool {
         return true
     }
     
