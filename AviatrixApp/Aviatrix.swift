@@ -11,7 +11,7 @@ import Foundation
 class Aviatrix {
     
     func start() {
-        true
+        return true
     }
     
     func refuel() {
