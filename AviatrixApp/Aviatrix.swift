@@ -12,9 +12,15 @@ class Aviatrix {
     
     
     var running = false
-    
+    // add max / fuel level
+    let maxFuel = 5000.0
+    var fuelLevel = 5000.0
+    var milesPerGallon = 0.4
+    var fuelCost = 0.0
     // STEP 2: ADD PILOT NAME AND INITIALISER
     var author = ""
+    // STEP: add distance travelled
+    var distanceTraveled = 0
     init(pilotName: String) {
         author = pilotName
     }
@@ -25,13 +31,20 @@ class Aviatrix {
         return running
     }
     
-    func refuel() {
-        
+    func refuel() -> Double {
+        let refuelAmount = maxFuel - fuelLevel
+        fuelLevel = 5000.0
+        return refuelAmount
     }
     
     func flyTo(destination : String) {
+        // STEP: add to distance travelled, fuel level
+        distanceTraveled += distanceTo(home: location, target: destination)
+        fuelLevel -= Double(distanceTraveled)*milesPerGallon
         // STEP: store location in func
         location = destination
+        milesPerGallon = 0.55 - (fuelLevel)*(0.00005)
+        
     }
     
     // PROBLEM AREA: never actually defined a data variable as the tutorial suggests, but can do so here:
