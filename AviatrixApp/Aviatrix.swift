@@ -10,8 +10,19 @@ import Foundation
 
 class Aviatrix {
     
+    
+    var running = false
+    
+    // STEP TWO: ADD PILOT NAME AND INITIALISER
+    var author = ""
+    init(pilotName: String) {
+        author = pilotName
+    }
+    
+    // STEP ONE: CHANGE RUNNING, START AT FALSE
     func start() -> Bool {
-        return true
+        running = true
+        return running
     }
     
     func refuel() {
