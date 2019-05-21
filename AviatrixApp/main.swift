@@ -11,8 +11,8 @@ import Foundation
 func gauges(myPlane : Aviatrix) {
     print("Reading the gauges...")
     print(" ")
-//    print("| Running:  | ✅")
-//    print("| Location:  | \(myPlane.location)")
+    print("| Running:  | ✅")
+    print("| Location:  | \(myPlane.location)")
 //    print("| Distance:  | \(myPlane.distanceTraveled) miles")
 //    print("| Fuel:      | \(myPlane.fuelLevel) gallons")
 //    print("| Max Fuel:  | \(myPlane.maxFuel) gallons")
@@ -26,7 +26,8 @@ func fly(myPlane : Aviatrix) {
     let destinations = myPlane.knownDestinations()
     
     for (index, city) in destinations.enumerated() {
-        let distance = myPlane.distanceTo(target: city)
+        // STEP: edited distanceTo function
+        let distance = myPlane.distanceTo(home: myPlane.location,target: city)
         print("\(index): \(city), \(distance) miles")
     }
     
@@ -41,7 +42,8 @@ func fly(myPlane : Aviatrix) {
         
         if fuelCheck(myPlane: myPlane, destination : desiredLocation) {
             myPlane.flyTo(destination: desiredLocation)
-            print("🛬 You've arrived in _________!")
+            // STEP: add specific city
+            print("🛬 You've arrived in \(myPlane.location)!")
             gauges(myPlane: myPlane)
         }
     }
